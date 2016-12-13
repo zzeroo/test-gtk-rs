@@ -1,0 +1,10 @@
+[package]
+name = "test-gtk-rs"
+version = "0.1.0"
+authors = ["Martin Brodbeck <martin@brodbeck-online.de>"]
+
+[dependencies]
+
+[dependencies.gtk]
+version = "0.1.1"
+features = ["v3_16"]
