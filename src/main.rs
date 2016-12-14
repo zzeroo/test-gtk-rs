@@ -27,6 +27,13 @@ fn main() {
     let row = model_list_of_data.append();
     model_list_of_data.set_value(&row, 0, &"Test1".to_string().to_value());
 
+    let column = TreeViewColumn::new();
+    let cell = gtk::CellRendererText::new();
+
+    column.pack_start(&cell, true);
+    column.add_attribute(&cell, "text", 0);
+    tree_view.append_column(&column);
+
     main_window.connect_delete_event(|_, _| {
         gtk::main_quit();
         Inhibit(false)
